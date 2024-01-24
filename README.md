@@ -19,9 +19,16 @@ The implementation is structured having the following principles:
     - Server Roles
     - Database Roles
     - Custom Roles
--   Wrapper Code. Activities that can be performed by executing Stored Procedure code developed for single purpose, like running DBCC commands
+  - Wrapper Code. Activities that can be performed by executing Stored Procedure code developed for single purpose, like:
+  -   running DBCC commands
+  -   setting or changing QUERY STORE properties
+  
 
   This solution prioritized finding Access Control options, as these are easy to implement, and backward compatible with future SQL Server versions
+
+  It is recommended first to work with the contents on the AUDITING folder, and then use the contents on the other folders as needed
+
+  note: the database used is a copy of the AdventureWorks sample database
 
   This Sample Code is provided for the purpose of illustration only and is not intended
   to be used in a production environment.  THIS SAMPLE CODE AND ANY RELATED INFORMATION ARE
