@@ -14,8 +14,8 @@ use the following scripts in the order they appear in the table below:
 | 040 - ENABLE AUDITING.sql                                      | Enables (starts) Server-Audit and Database-Audit specifications   |
 | 050 - DATA CLASSIFICATION.sql                                  | Drops previously created SENSITIVITY CLASSIFICATION on Columns.<br> Adds  SENSITIVITY CLASSIFICATION to columns with PII and PHI data   |
 | 060 - ALTER Database Audit Spec after data classification.sql  | Disables <named> Database-Audit-Specification.<br> Alters <named> Database-Audit-Specification to add events that deal with SENSITIVE classified data.<br> Re-enables <named> Database-Audit-Specification.  |
-| 070 - List_of_columns_with_data_classification.sql             |    |
-| 080 - SQLServer_DataDiscoveryClassification_Tool.sql           |    |
+| 070 - List_of_columns_with_data_classification.sql             | Lists and Validates SENSITIVE CLASSIFICATION is added to columns with PII and PHI data   |
+| 080 - SQLServer_DataDiscoveryClassification_Tool.sql           | URL pointing to [MS Learn](https://learn.microsoft.com/en-us/sql/relational-databases/security/sql-data-discovery-and-classification?view=sql-server-ver16&tabs=t-sql) showing how to use SSMS UI tool to work with SENSITIVE CLASSIFIED data   |
 | 090 - Apply_DataMasking_to_data_Classified_Columns.sql         |    |
 | 100 - CREATE_EndUser_to_select_Masked_Columns.sql              |    |
 | 110 - Test_EndUser_selecting_Masked_Columns.sql                |    |
