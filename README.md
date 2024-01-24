@@ -20,8 +20,8 @@ The implementation is structured having the following principles:
     - Database Roles
     - Custom Roles
   - Wrapper Code. Activities that can be performed by executing Stored Procedure code developed for single purpose, like:
-  -   running DBCC commands
-  -   setting or changing QUERY STORE properties
+    - running DBCC commands
+    - setting or changing QUERY STORE properties
   
 
   This solution prioritized finding Access Control options, as these are easy to implement, and backward compatible with future SQL Server versions
