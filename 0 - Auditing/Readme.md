@@ -12,8 +12,8 @@ use the following scripts in the order they appear in the table below:
 | 020 - AUDIT SERVER SPEC.sql                                    | Drops an existing <named> Server-Audit-Specification.<br> Creates <named> Server-Audit-Specification    | 
 | 030 - AUDIT Database Spec.sql                                  | Stops and Drops an existing <named> Database-Audit-Specification.<br> Creates <named> Database-Audit-Specification    | 
 | 040 - ENABLE AUDITING.sql                                      | Enables (starts) Server-Audit and Database-Audit specifications   |
-| 050 - DATA CLASSIFICATION.sql                                  |    |
-| 060 - ALTER Database Audit Spec after data classification.sql  |    |
+| 050 - DATA CLASSIFICATION.sql                                  | Drops previously created SENSITIVITY CLASSIFICATION on Columns.<br> Adds  SENSITIVITY CLASSIFICATION to columns with PII and PHI data   |
+| 060 - ALTER Database Audit Spec after data classification.sql  | Disables <named> Database-Audit-Specification.<br> Alters <named> Database-Audit-Specification to add events that deal with SENSITIVE classified data.<br> Re-enables <named> Database-Audit-Specification.  |
 | 070 - List_of_columns_with_data_classification.sql             |    |
 | 080 - SQLServer_DataDiscoveryClassification_Tool.sql           |    |
 | 090 - Apply_DataMasking_to_data_Classified_Columns.sql         |    |
