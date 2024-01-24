@@ -10,8 +10,8 @@ use the following scripts in the order they appear in the table below:
 | ----------- | ----------- |
 | 010 - CREATE AUDIT SERVER.sql                                  | Stops and Drops existing <named> Server-Audit.<br> Creates <named> Server-Audit    | 
 | 020 - AUDIT SERVER SPEC.sql                                    | Drops an existing <named> Server-Audit-Specification.<br> Creates <named> Server-Audit-Specification    | 
-| 030 - AUDIT Database Spec.sql                                  |    |
-| 040 - ENABLE AUDITING.sql                                      |    |
+| 030 - AUDIT Database Spec.sql                                  | Stops and Drops an existing <named> Database-Audit-Specification.<br> Creates <named> Database-Audit-Specification    | 
+| 040 - ENABLE AUDITING.sql                                      | Enables (starts) Server-Audit and Database-Audit specifications   |
 | 050 - DATA CLASSIFICATION.sql                                  |    |
 | 060 - ALTER Database Audit Spec after data classification.sql  |    |
 | 070 - List_of_columns_with_data_classification.sql             |    |
