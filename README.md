@@ -1,6 +1,7 @@
 # SQL-Least-Privilege-Access-Control
 
-This is a solution to implement SQL Server security, by removing rights of DBAs to SELECT data from tables
+This is a solution to implement SQL Server security, by removing rights of DBAs to SELECT data from tables.<be>
+
 The implementation is structured having the following principles:
 
 - 1st: Identification of columns with PII or PHI data that need to be masked
@@ -28,7 +29,12 @@ The implementation is structured having the following principles:
 
   It is recommended to work first with the contents on the AUDITING folder, and then use the contents on the other folders as needed
 
-  note: the database used is a copy of the AdventureWorks sample database
+  note: the database used is a copy of the AdventureWorks sample database<br>
+  You can download a copy of the AdventureWorks database from [here](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorks2019.bak)<br>
+  The examples are based on the AdventureWorks2019](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorks2019.bak) version - but any version should work with minimal adjustments<br>
+
+
+#2 disclaimer
 
   This Sample Code is provided for the purpose of illustration only and is not intended
   to be used in a production environment.  THIS SAMPLE CODE AND ANY RELATED INFORMATION ARE
