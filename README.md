@@ -24,9 +24,9 @@ The implementation is structured having the following principles:
     - setting or changing QUERY STORE properties
   
 
-  This solution prioritized finding Access Control options, as these are easy to implement, and backward compatible with future SQL Server versions
+  This solution prioritized finding Access Control options, as these are easy to implement and backward compatible with future SQL Server versions
 
-  It is recommended first to work with the contents on the AUDITING folder, and then use the contents on the other folders as needed
+  It is recommended to work first with the contents on the AUDITING folder, and then use the contents on the other folders as needed
 
   note: the database used is a copy of the AdventureWorks sample database
 
