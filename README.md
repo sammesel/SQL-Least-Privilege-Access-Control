@@ -34,7 +34,7 @@ The implementation is structured having the following principles:
   The examples are based on the [AdventureWorks2019](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorks2019.bak) version - but any version should work with minimal adjustments<br>
 
 
-#2 disclaimer
+## disclaimer
 
   This Sample Code is provided for the purpose of illustration only and is not intended
   to be used in a production environment.  THIS SAMPLE CODE AND ANY RELATED INFORMATION ARE
