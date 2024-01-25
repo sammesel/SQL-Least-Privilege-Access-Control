@@ -8,7 +8,7 @@ Use the following scripts in the order they appear in the table below:
 
 | Script | Description |
 | ----------- | ----------- |
-| 100_B1_create_Login_User.sql | | 
+| 100_B1_create_Login_User.sql | Creates a high-privilege Login and corresponding User account on Master. This account is used on following scripts to create wrapper code | 
 | 100_B2_wrapper_create_sp_configure.sql | | 
 | 100_B3_wrapper_validate_sp_configure.sql | | 
 | 100_B4_DROP_Objects.sql | | 
