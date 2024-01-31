@@ -25,12 +25,12 @@ Use the following scripts in the order they appear in the table below:
 | 200_B1_A_Create_DBA_with_db_ddlAdmin.sql | Creates a Login and User for DDL-Admin | 
 | 200_B1_B_test_DBA_with_db_ddlAdmin_index_Maintenance.sql | Login as DDL-Admin.<br>Executes statements to: <ul><li>Create a Table</li><li>Altetr Table</li><li>Access Data from created table</li><li>Add (document) Extended Properties to the table</li><li>try to select data from the created table</li><li>try to drop created table</li><li>try to overpower masking settings</li><li>Try to select data from other schemas/tables</li><li>Creates Indexes</li><li>Alter Indexes</li><li>Drop Indexes</li><li>Alter Indexes</li><li>Create Views</li></ul> | 
 | 200_B1_C_test_DBA_with_db_ddlAdmin_statistics_Maintenance.sql | Login as DDL-Admin.<br>Executes statements to: <ul><li>Create Statistics</li><li>Update Statistics</li><li>Drop Statistics</li></ul>|
-| 200_B1_D_DROP_DBA_with_db_ddlAdmin.sql |  | 
-| 200_D1_A_x03A_create_DBA_without_DBOWNER.sql |  | 
-| 200_D1_B_x04A_create_elevated_logins_roles.sql |  | 
-| 200_D1_C_x04B_create_elevated_SPs.sql |  | 
-| 200_D1_D_Test_SPs.sql |  | 
-| 200_D1_E_CleanUp.sql |  | 
-| 200_D27_A_x03C1_Create_DBA_with_ServerAdmin.sql |  | 
-| 200_D27_B_x03C2_test_DBA_with_ServerAdmin.sql |  | 
-| 200_D27_C_CleanUp.sql |  | 
+| 200_B1_D_DROP_DBA_with_db_ddlAdmin.sql | Clean-up Login and User for DDL Admin | 
+| 200_D1_A_create_DBA_for_DBCC.sql | Create a login who will perform DBCC operations | 
+| 200_D1_B_create_elevated_logins_roles.sql | Creates: <ul><li>a schema to contain tools to execute DBCC</li><li>an Internal Principal for DBCC commands</li></ul>  | 
+| 200_D1_C_create_elevated_SPs.sql | Creates Stored Procedures in the tools schema to execute DBCC commands:<ul><li>up_sp_DBCC_statement - Stored Procedure to execute a generic DBCC command, with limited validation</li><li>up_sp_DBCC_Statement_all_DBCCs - Stored Procedure to execute commands limited to a **restricted88  list of DBCC commands</li></ul> | 
+| 200_D1_D_Test_SPs.sql | Login as DBCC Operator.<br> Try to SELECT from tables.<br>Try to manipulate Masking settings.<br>Try to execute DBCC commands.<br>Execute Stored Procedures created to wrap DBCC execution  | 
+| 200_D1_E_CleanUp.sql | Drop the User and Login for DBCC Operator | 
+| 200_D27_A_Create_DBA_with_ServerAdmin.sql | Create Login and User for Server-Admin operations | 
+| 200_D27_B_test_DBA_with_ServerAdmin.sql | Login as Server-Admin operator.<br>Try to select from tables.<br>Try to manipulate masking settings.<br>Try to run DBCC commands.<br>Try to SHUTDOWN server.<br>Try to execute stored procedure sp_lock.<br>Try to stop/pause/resume/restart engine  | 
+| 200_D27_C_CleanUp.sql | Clean-up Server-Admin User and Login  | 
