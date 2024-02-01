@@ -21,8 +21,8 @@ Use the following scripts in the order they appear in the table below:
 | 300_B1_C_Test_DBA_with_AlterAnyUser_to_grant_users.sql | Login as Security-DBA-for-USERs to: <ul><li>Try to Add database-users to *Database-Roles*</li><li>Try to execute *sp_addrolemember* to add database-users to roles</li><li>Try to *GRANT* permissions to Database-Users</li></ul> |  Y | ? | ? |
 | 300_B1_D_Test_end_user.sql | Login using credentials created in previous scripts to:<ul><li>Execute *SELECT* on tables</li><li>Try to manipulate Masking settings</li><li>Try to execute DBCC commands</li></ul>  |  Y | ? | ? |
 | 300_B1_E_DROP_DBA_with_AlterAnyUser.sql | Clean-Up Security-DBA-for-Users |  Y | ? | ? |
-| 300_C1_A_CREATE_DBA_with._CreateRole.sql | |  Y | ? | ? |
-| 300_C1_B_CREATE_Roles_GrantPermissions_AddMembers.sql | |  Y | ? | ? |
-| 300_C1_C_Test_EndUsers_vs_Roles.sql | |  Y | ? | ? |
-| 300_C1_D_DROP_objects_created_by_DBA_with_CreateRole.sql | |  Y | ? | ? |
-| 300_C1_E_Drop_UserAndLogin_DBA_with_CreateRole.sql | |  Y | ? | ? |
+| 300_C1_A_CREATE_DBA_with._CreateRole.sql | Create a **Security-DBA-for-Roles** |  Y | ? | ? |
+| 300_C1_B_CREATE_Roles_GrantPermissions_AddMembers.sql | Login as Security-DBA-for-Roles to:<ul><li>Create Roles</li><li>Grant permissions to these new roles</li><li>Add Members into these Roles</li></ul> |  Y | ? | ? |
+| 300_C1_C_Test_EndUsers_vs_Roles.sql | Test end-user access for those placed in the roles created |  Y | ? | ? |
+| 300_C1_D_DROP_objects_created_by_DBA_with_CreateRole.sql | Login as Security-DBA-for-Roles to Clean-up:<ul><li>Remove members from Roles</li><li>Drop roles</li></ul> |  Y | ? | ? |
+| 300_C1_E_Drop_UserAndLogin_DBA_with_CreateRole.sql | Login as sa to clean-up:<ul><li>Remove member *Security-DBA-for-Roles* from Roles</li><li>Drop User and Login *Security-DBA-for-Roles*</li></ul>  |  Y | ? | ? |
