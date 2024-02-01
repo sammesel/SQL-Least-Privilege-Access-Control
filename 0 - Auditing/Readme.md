@@ -8,19 +8,19 @@ Use the following scripts in the order they appear in the table below:
 
 ## NOTE: all scripts display at the very top the **login name** that should be used for that script. 
 
-| Script | Description |
-| ----------- | ----------- |
-| 010 - CREATE AUDIT SERVER.sql                                  | Stops and Drops existing <named> Server-Audit.<br> Creates <named> Server-Audit    | 
-| 020 - AUDIT SERVER SPEC.sql                                    | Drops an existing <named> Server-Audit-Specification.<br> Creates <named> Server-Audit-Specification    | 
-| 030 - AUDIT Database Spec.sql                                  | Stops and Drops an existing <named> Database-Audit-Specification.<br> Creates <named> Database-Audit-Specification    | 
-| 040 - ENABLE AUDITING.sql                                      | Enables (starts) Server-Audit and Database-Audit specifications   |
-| 050 - DATA CLASSIFICATION.sql                                  | Drops previously created SENSITIVITY CLASSIFICATION on Columns.<br> Adds  SENSITIVITY CLASSIFICATION to columns with PII and PHI data   |
-| 060 - ALTER Database Audit Spec after data classification.sql  | Disables <named> Database-Audit-Specification.<br> Alters <named> Database-Audit-Specification to add events that deal with SENSITIVE classified data.<br> Re-enables <named> Database-Audit-Specification.  |
-| 070 - List_of_columns_with_data_classification.sql             | Lists and Validates SENSITIVE CLASSIFICATION is added to columns with PII and PHI data   |
-| 080 - SQLServer_DataDiscoveryClassification_Tool.sql           | URL pointing to [MS Learn](https://learn.microsoft.com/en-us/sql/relational-databases/security/sql-data-discovery-and-classification?view=sql-server-ver16&tabs=t-sql) showing how to use SSMS UI tool to work with SENSITIVE CLASSIFIED data   |
-| 090 - Apply_DataMasking_to_data_Classified_Columns.sql         | Applies Dynamic-Data-Masking using DEFAULT function to columns.<br> Lists all Columns and properties with Dynamic-Data-Masking.<br> Lists Tables that contain columns with Dynamic-Data-Masking    |
-| 100 - CREATE_EndUser_to_select_Masked_Columns.sql              | Creates an End-User to be test Dynamic-Data-Masking.<br> Adds this user to db_datareader and db_datawriter Database-Roles.    |
-| 110 - Test_EndUser_selecting_Masked_Columns.sql                | script to validate End-User cannot see raw-data, only Masked-Data.<br>**Make sure to change connection to created End-User Login/password**    |
-| 120 - Observe Auditing Records.SQL                             | Review AUDIT entries made by End-User   |
-| 130 - CleanUp_EndUser.sql                                      | After testing End-User and checking the AUDIT entries, DROP End-User user and Login  |
-| 140 - Stop_Auditing_Capture.SQL                                | This script is to be used as very last script, after testing the complete solution (**not only the Scripts on the AUDITING folder**) stop and drop Audit resources  |
+| Script | Description  | SQL Server on VM | Azure SQL DB | Azure SQL MI |
+| ----------- | ----------- | ----------- | ----------- | ----------- |
+| 010 - CREATE AUDIT SERVER.sql                                  | Stops and Drops existing <named> Server-Audit.<br> Creates <named> Server-Audit    |  Y | ? | ? |
+| 020 - AUDIT SERVER SPEC.sql                                    | Drops an existing <named> Server-Audit-Specification.<br> Creates <named> Server-Audit-Specification    |  Y | ? | ? |
+| 030 - AUDIT Database Spec.sql                                  | Stops and Drops an existing <named> Database-Audit-Specification.<br> Creates <named> Database-Audit-Specification    |  Y | ? | ? |
+| 040 - ENABLE AUDITING.sql                                      | Enables (starts) Server-Audit and Database-Audit specifications   | Y | ? | ? |
+| 050 - DATA CLASSIFICATION.sql                                  | Drops previously created SENSITIVITY CLASSIFICATION on Columns.<br> Adds  SENSITIVITY CLASSIFICATION to columns with PII and PHI data   | Y | ? | ? |
+| 060 - ALTER Database Audit Spec after data classification.sql  | Disables <named> Database-Audit-Specification.<br> Alters <named> Database-Audit-Specification to add events that deal with SENSITIVE classified data.<br> Re-enables <named> Database-Audit-Specification.  | Y | ? | ? |
+| 070 - List_of_columns_with_data_classification.sql             | Lists and Validates SENSITIVE CLASSIFICATION is added to columns with PII and PHI data   | Y | ? | ? |
+| 080 - SQLServer_DataDiscoveryClassification_Tool.sql           | URL pointing to [MS Learn](https://learn.microsoft.com/en-us/sql/relational-databases/security/sql-data-discovery-and-classification?view=sql-server-ver16&tabs=t-sql) showing how to use SSMS UI tool to work with SENSITIVE CLASSIFIED data   | Y | ? | ? |
+| 090 - Apply_DataMasking_to_data_Classified_Columns.sql         | Applies Dynamic-Data-Masking using DEFAULT function to columns.<br> Lists all Columns and properties with Dynamic-Data-Masking.<br> Lists Tables that contain columns with Dynamic-Data-Masking    | Y | ? | ? |
+| 100 - CREATE_EndUser_to_select_Masked_Columns.sql              | Creates an End-User to be test Dynamic-Data-Masking.<br> Adds this user to db_datareader and db_datawriter Database-Roles.    | Y | ? | ? |
+| 110 - Test_EndUser_selecting_Masked_Columns.sql                | script to validate End-User cannot see raw-data, only Masked-Data.<br>**Make sure to change connection to created End-User Login/password**    | Y | ? | ? |
+| 120 - Observe Auditing Records.SQL                             | Review AUDIT entries made by End-User   | Y | ? | ? |
+| 130 - CleanUp_EndUser.sql                                      | After testing End-User and checking the AUDIT entries, DROP End-User user and Login  | Y | ? | ? |
+| 140 - Stop_Auditing_Capture.SQL                                | This script is to be used as very last script, after testing the complete solution (**not only the Scripts on the AUDITING folder**) stop and drop Audit resources  | Y | ? | ? |
