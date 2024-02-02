@@ -2,9 +2,18 @@
 
 ## This folder contains instructions on how to create wrapper code related to operations that require higher permissions and will be executed as Stored-Procedures
 
-Use the following scripts in the order they appear in the table below:
 
-## NOTE: all scripts display at the very top the **login name** that should be used for that script. 
+## NOTE: All scripts display at the very top the **login name** that should be used for that script.<br>
+<ul>
+<li>Execute the Query to display the username to make sure you are using the correct persona</li>
+<li>For scripts that switch between MASTER and the SQLSecurityDemoDB databases:<ul>
+  <li>After Switching the database, execute the query to display the username again, so you can see how that user is mapped</li>
+  <li>When testing these scripts on Azure SQL Database the **USE** command will fail, you need to switch the database manually via SSMS toolbar</li>
+  </ul>
+</ul>
+<br>
+
+Use the following scripts in the order they appear in the table below:
 
 | Script | Description | SQL Server on VM | Azure SQL DB | Azure SQL MI |
 | ----------- | ----------- | ----------- | ----------- | ----------- |
