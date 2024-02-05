@@ -23,7 +23,7 @@
 ### 2 - for Azure SQL Managed Instance.<br>
 The scripts mention the **sa** principal for SQL Server instance running on-premises or on a VM.<br>
 When testing the scripts on an Azure SQL Managed Instance, instead of **sa** you need to login with the **Managed Instance Admin** that can be obtained at the Overview page of your Azure SQL MI
-![Azure-SQL-MI-LOGIN](image.jpg)
+![Azure-SQL-MI-LOGIN](..\Azure-SQL-MI-Credential-for-LOGIN.png)
 
 
 
