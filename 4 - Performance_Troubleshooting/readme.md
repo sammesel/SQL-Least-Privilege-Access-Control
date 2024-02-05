@@ -37,6 +37,10 @@ Use the following scripts in the order they appear in the table below:
 | 400_C1_C_QUERY_STORE_create_WrapperCode.sql | Create Stored Procedures under the permissions of the internal-principal :<ul><li>up_sp_query_store_set_storage - to modify QAuery Store  storage size</li><li>up_sp_query_store_force_plan - to force a Query-ID to use a given Plan-Id</li></ul> | Y | ? | ? |
 | 400_C1_D_Test_DBA_for_QueryStore.sql | Login as **QueryStore-DBA** to perform tests:<ul><li>Try to select from tables</li><li>Perform SELECT statement on Query Store tables</li></li>Try to execute sp_query_store_force_plan</li><li>Execute Wrapper Code to force plan</li><li>Try to ALTER DATABASE to change Query Store storage size</li><li>Execute Wrapper Code to change Query Store storage size</li></ul>   | Y | ? | ? |
 | 400_C1_E_DROP_DBA_for_QueryStore.sql.sql | Clean-up | Y | ? | ? |
-| 400_E1_A_ExtendedEvent_Security_SQL2022.sql |  | Y | ? | ? |
-
-
+| 400_E1_A_ExtendedEvent_Security_SQL2022.sql | Explains permissions introduced with SQL Server 2022 to manage **Extended Events** permissions   | Y | Y | ? |
+| 400_E1_B1_A_Create_DBA_with_ALTER_ANY_EVENT_SESSION.sql | Create Login User Role to a principal who Creates/Alters/Drops Extended Event **sessions**   | Y | Y | ? |
+| 400_E1_B1_B_Create_DBA_with_VIEW_SERVER_PERFORMANCE_STATE_for_XEVENTS.sql | Create Login User Role to a principal who Reads Extended Event **sessions**  | Y | Y | ? |
+| 400_E1_C1_A_Login_DBA_with_ALTER_ANY_EVENT_SESSION_to_create_session.sql | Login as **DBA-CreateXevents** to Create and Start an Xevent **session**   | Y | Y | ? |
+| 400_E1_C1_B_Login_DBA_with_VIEW_SERVER_PERFORMANCE_STATE_to_read_Xevents.sql | Login as **DBA-ReadXevents** to Read data captured on the Xevent **session**    | Y | Y | ? |
+| 400_E1_D1_A_DROP_DBA_with_ALTER_ANY_EVENT_SESSION.sql | Clean-Up **DBA-CreateXevents** principal and objects    | Y | Y | ? |
+| 400_E1_D1_A_DROP_DBA_with_VIEW_SERVER_PERFORMANCE_STATE.sql | Clean-Up **DBA-ReadsXevents** principal and objects    | Y | Y | ? |
