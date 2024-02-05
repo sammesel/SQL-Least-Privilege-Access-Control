@@ -7,25 +7,6 @@
   <li>Custom-Roles</li>
 </ul>
 
-
-## NOTES: 
-
-### 1-  All scripts display at the very top the **login name** that should be used for that script.<br>
-<ul>
-<li>Execute the Query to display the username to make sure you are using the correct persona</li>
-<li>For scripts that switch between MASTER and the SQLSecurityDemoDB databases:<ul>
-  <li>After Switching the database, execute the query to display the username again, so you can see how that user is mapped</li>
-  <li>When testing these scripts on Azure SQL Database the **USE** command will fail, you need to switch the database manually via SSMS toolbar</li>
-  </ul>
-</ul>
-<br>
-
-### 2 - for Azure SQL Managed Instance.<br>
-The scripts mention the **sa** principal for SQL Server instance running on-premises or on a VM.<br>
-When testing the scripts on an Azure SQL Managed Instance, instead of **sa** you need to login with the **Managed Instance Admin** that can be obtained at the Overview page of your Azure SQL MI
-![Azure-SQL-MI-LOGIN](images/Azure-SQL-MI-Credential-for-LOGIN.png)
-
-
 Use the following scripts in the order they appear in the table below:
 
 | Script | Description | SQL Server on VM | Azure SQL DB | Azure SQL MI |
