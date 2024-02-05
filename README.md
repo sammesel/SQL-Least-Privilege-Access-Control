@@ -35,7 +35,7 @@ The implementation is structured having the following principles:
 
 ## NOTES: 
 
-### 1-  All scripts display the **login name** that should be used for that script at the very top.<br>
+### 1-  All scripts display the **login name** to be used for that script at the very top.<br>
 ![Login Information](Username-Password-to-use.png)
 <ul>
 <li>Execute the Query to display the username to make sure you are using the correct persona</li>
