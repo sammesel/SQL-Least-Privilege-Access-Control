@@ -46,3 +46,12 @@ The implementation is structured having the following principles:
     (ii) to include a valid copyright notice on Your software product in which the Sample is embedded;<br>
     and (iii) to indemnify, hold harmless, and defend Us and Our suppliers from and against any claims or lawsuits, including attorneys fees, that arise or result from the use or distribution of the Sample Code.<br> 
 
+## References
+
+The following links are useful resources for your study / SQL security review.
+- [Workpshop: SQL Security Ground to Cloud](https://github.com/David-Seis/SecureYourAzureData) by Buck Woody and David Seis<br>
+- [Packaging Permissions in Stored Procedures](https://www.sommarskog.se/grantperm.html) by Erland Sommarskog, SQL Server MVP - updated on 2023-06-13.<br>
+- [Using Query Store with least privileges instead of db_owner to achieve Separation of Duties](https://techcommunity.microsoft.com/t5/azure-sql-blog/using-query-store-with-least-privileges-instead-of-db-owner-to/ba-p/775177) by Andreas Wolter<br>
+- [New granular permissions for SQL Server 2022 and Azure SQL to improve adherence with PoLP](https://techcommunity.microsoft.com/t5/sql-server-blog/new-granular-permissions-for-sql-server-2022-and-azure-sql-to/ba-p/3607507) by Andreas Wolter<br>
+  
+  
