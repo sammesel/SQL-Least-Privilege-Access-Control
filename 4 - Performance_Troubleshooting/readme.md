@@ -12,7 +12,7 @@ Use the following scripts in the order they appear in the table below:
 | Script | Description | SQL Server on VM | Azure SQL DB | Azure SQL MI |
 | ----------- | ----------- | ----------- | ----------- | ----------- |
 | 400_A1_test_DBAs_sys_log_on_AzureSQLDB.sql | This script is applicable for **Azure SQL Database** only.<br> Read EVENT-LOG records  | N | N | Y |
-| 400_A2_A_wrapper_create_sp_readerrorlog.sql<br>**400_A2_Create_Internal_LoginUserRole_for_errorlog.sql** | Create Login and User for an **ErrorLog-Principal**<br>Create a ROLE for **ErrorLog-Principal**<br>Grant:<ul><li>access to stored procedures: *xp_readerrorlog* and *sp_readerrorlog*</li><li>VIEW ANY ERROR LOG</li>Grant CONTROL to the Role<li></li><li>Grant ALTER to the role</li><li>Grant VIEW SERVER STATE to the login</li> | Y | ? | ? |
+| 400_A2_A_wrapper_create_sp_readerrorlog.sql<br>**400_A2_A_Create_Internal_LoginUserRole_for_errorlog.sql** | Create Login and User for an **ErrorLog-Principal**<br>Create a ROLE for **ErrorLog-Principal**<br>Grant:<ul><li>access to stored procedures: *xp_readerrorlog* and *sp_readerrorlog*</li><li>VIEW ANY ERROR LOG</li>Grant CONTROL to the Role<li></li><li>Grant ALTER to the role</li><li>Grant VIEW SERVER STATE to the login</li> | Y | ? | ? |
 | 400_A2_B_Test_DBA_with_xp_errorlog.sql<br>**400_A2_B_create_wrapper_code_for_errorlog.sql**| Create wrapper stored procedures to:<ul><li>call *sp_readerrorlog*</li><li>call *sp_cycle_errorlog*</li></ul>   | Y | ? | ? |
 | 400_A2_C_Test_WrapperCode.sql | Test executing wrapper code  | Y | ? | ? |
 | 400_A2_D_DROP_WrapperCode_UserLogin.sql | Clean-Up  | Y | ? | ? |
