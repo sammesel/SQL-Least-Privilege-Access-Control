@@ -11,16 +11,16 @@ Use the following scripts in the order they appear in the table below:
 
 | Script | Description | SQL Server on VM | Azure SQL DB | Azure SQL MI |
 | ----------- | ----------- | ----------- | ----------- | ----------- |
-| 400_A1_test_DBAs_sys_log_on_AzureSQLDB.sql | This script is applicable for **Azure SQL Database** only.<br> Read EVENT-LOG records  | N | Y | ? |
+| 400_A1_test_DBAs_sys_log_on_AzureSQLDB.sql | This script is applicable for **Azure SQL Database** only.<br> Read EVENT-LOG records  | N | N | Y |
 | 400_A2_A_wrapper_create_sp_readerrorlog.sql | Create Login and User for an **ErrorLog-Principal**<br>Create a ROLE for **ErrorLog-Principal**<br>Grant:<ul><li>access to stored procedures: *xp_readerrorlog* and *sp_readerrorlog*</li><li>VIEW ANY ERROR LOG</li>Grant CONTROL to the Role<li></li><li>Grant ALTER to the role</li><li>Grant VIEW SERVER STATE to the login</li> | Y | ? | ? |
 | 400_A2_B_Test_DBA_with_xp_errorlog.sql | Create wrapper stored procedures to:<ul><li>call *sp_readerrorlog*</li><li>call *sp_cycle_errorlog*</li></ul>   | Y | ? | ? |
 | 400_A2_C_Test_WrapperCode.sql | Test executing wrapper code  | Y | ? | ? |
 | 400_A2_D_DROP_WrapperCode_UserLogin.sql | Clean-Up  | Y | ? | ? |
 | 400_A2_Z_Explanation.sql | Auxiliary queries to explain the grants given to the Login  | Y | ? | ? |
-| 400_B1_A_Create_DBA_with_ServerPerformance.sql | Create Login **PerformanceTroubleshooting-DBA**<br>Create Role **PerformanceTroubleshooting-Role**<br>Add DBA into Role<br>Grant permisions to Role | Y | ? | ? |
-| 400_B1_B1_Test_DMVs_DBA_With_PerformaceTroubleshooting.sql | Login as **PerformanceTroubleshooting-DBA**<br><ul><li>Try to add self to **db_datareader** database-role</li><li>Try to SELECT data from tables</li><li>Execute SELECT from performance related DMVs</li></ul> | Y | ? | ? |
-| 400_B1_B2_Test_ErrorLog_DBA_With_PerformaceTroubleshooting.sql | Login as **PerformanceTroubleshooting-DBA**<br><ul><li>Execute xp_readerrorlog</li><li>Execute sys.sp_enumerrorlogs</li></ul> | Y | ? | ? |
-| 400_B1_C_DROP_DBA_With_PerformaceTroubleshooting.sql | Clean-up Login / User / Role **PerformanceTroubleshooting-DBA**  | Y | ? | ? |
+| 400_B1_A_Create_DBA_with_ServerPerformance.sql | Create Login **PerformanceTroubleshooting-DBA**<br>Create Role **PerformanceTroubleshooting-Role**<br>Add DBA into Role<br>Grant permisions to Role | Y | Y | ? |
+| 400_B1_B1_Test_DMVs_DBA_With_PerformaceTroubleshooting.sql | Login as **PerformanceTroubleshooting-DBA**<br><ul><li>Try to add self to **db_datareader** database-role</li><li>Try to SELECT data from tables</li><li>Execute SELECT from performance related DMVs</li></ul> | Y | Y | ? |
+| 400_B1_B2_Test_ErrorLog_DBA_With_PerformaceTroubleshooting.sql | Login as **PerformanceTroubleshooting-DBA**<br><ul><li>Execute xp_readerrorlog</li><li>Execute sys.sp_enumerrorlogs</li></ul> | Y | Y | ? |
+| 400_B1_C_DROP_DBA_With_PerformaceTroubleshooting.sql | Clean-up Login / User / Role **PerformanceTroubleshooting-DBA**  | Y | Y | ? |
 | 400_C1_A_Create_DBA_for_QueryStore.sql | Create Login User and Role for **QueryStore-DBA**<br>Grant VIEW DATABASE STATE to Role<br>Create *dba_tools_QueryStore* Schema for **QueryStore-SPs**<br>Grant EXECUTE on *dba_tools_QueryStore* Schema to the Role | Y | Y | ? |
 | 400_C1_B_QUERY_STORE_create_elevated_logins_roles.sql | Create Login User and Role for an internal-principal<br> Grant ALTER DB permission to Role<br>  | Y | Y | ? |
 | 400_C1_C_QUERY_STORE_create_WrapperCode.sql | Create Stored Procedures under the permissions of the internal-principal :<ul><li>up_sp_query_store_set_storage - to modify QAuery Store  storage size</li><li>up_sp_query_store_force_plan - to force a Query-ID to use a given Plan-Id</li></ul> | Y | Y | ? |
