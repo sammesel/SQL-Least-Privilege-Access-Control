@@ -36,7 +36,9 @@ The implementation is structured having the following principles:
 ## NOTES: 
 
 ### 1-  All scripts display the **login name** to be used for that script at the very top.<br>
+#### line 2 on the image below shows to use **sa**.
 ![Login Information](images/Username-Password-to-use.png)
+<br>
 <ul>
 <li>Execute the Query to display the username to make sure you are using the correct persona</li>
 <li>For scripts that switch between MASTER and the SQLSecurityDemoDB databases:<ul>
@@ -47,8 +49,11 @@ The implementation is structured having the following principles:
 <br>
 
 ### 2 - for Azure SQL Managed Instance.<br>
-For scripts using **sa** principal for SQL Server instance running on-premises or on a VM:<br>
-When testing the scripts on an Azure SQL Managed Instance, instead of **sa** you need to login with the **Managed Instance Admin** that can be obtained at the Overview page of your Azure SQL MI
+
+For scripts using **sa** principal:<br>
+<li>for SQL Server instance running on-premises or on a VM, use the **sa** credential</li>li>
+<li>for an Azure SQL Managed Instance, instead of **sa** you need to login with the **Managed Instance Admin** that can be obtained at the Overview page of your Azure SQL MI</li>
+</ul>
 ![Azure-SQL-MI-LOGIN](images/Azure-SQL-MI-Credential-for-LOGIN.png)
 
 
