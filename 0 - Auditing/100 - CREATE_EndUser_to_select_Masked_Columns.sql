@@ -12,7 +12,7 @@ SELECT USER_NAME(), SUSER_NAME() , session_user , system_user
 -- replace the password. it will be used on next script [110 - Test_EndUser_selecting_Masked_Columns.sql]
 USE master
 GO
-CREATE LOGIN User_DataReader WITH PASSWORD = '<password-place-holder>';
+CREATE LOGIN User_DataReader WITH PASSWORD = '<password-place-holder>',	CHECK_EXPIRATION=OFF, 	CHECK_POLICY=OFF;
 GO
 
 USE [SQLSecurityDemoDB]
