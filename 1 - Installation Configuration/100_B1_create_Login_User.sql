@@ -46,8 +46,3 @@ GRANT
 	ALTER SETTINGS
 	TO login_internal_principal_spconfigure
 GO
-
-ALTER SERVER ROLE [sysadmin] ADD MEMBER [login_internal_principal_spconfigure]
-GO
-ALTER SERVER ROLE [serveradmin] ADD MEMBER [login_internal_principal_spconfigure]
-GO
