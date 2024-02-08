@@ -20,13 +20,13 @@ USE [master]
 GO
 
 -- Dedicated schema to allow granular permissions and not on whole database or a schema with other objects
-CREATE SCHEMA tools
+CREATE SCHEMA tools_sp_configure
 GO
 	
 -- Special wrapper stored proc that is executed under the context of the above created user: role_internal_principal_ALTER_DB
-DROP PROCEDURE IF EXISTS tools.up_sp_configure_show_advanced_options
+DROP PROCEDURE IF EXISTS tools_sp_configure.up_sp_configure_show_advanced_options
 GO
-CREATE OR ALTER PROC tools.up_sp_configure_show_advanced_options
+CREATE OR ALTER PROC tools_sp_configure.up_sp_configure_show_advanced_options
 --WITH EXECUTE AS OWNER -- 'user_internal_principal_spconfigure'
 AS
 -- whatever is being done within the body of this procedure, will be done by the internal_principal_ALTER_DB
@@ -40,21 +40,21 @@ GO
 -------------------------------------------------------------------------------
 -- GRANT EXECUTE ON tools.up_sp_configure_show_advanced_options	TO user_internal_principal_spconfigure
 -- https://learn.microsoft.com/en-us/sql/t-sql/statements/grant-transact-sql?view=sql-server-ver16#with-grant-option
-GRANT EXECUTE ON tools.up_sp_configure_show_advanced_options	TO role_internal_principal_spconfigure -- WITH GRANT OPTION;  
+GRANT EXECUTE ON tools_sp_configure.up_sp_configure_show_advanced_options	TO role_internal_principal_spconfigure -- WITH GRANT OPTION;  
 -- tests
-EXEC tools.up_sp_configure_show_advanced_options
+EXEC tools_sp_configure.up_sp_configure_show_advanced_options
 
-select user_name(), suser_name()
+SELECT USER_NAME(), SUSER_NAME() , session_user , system_user
 EXECUTE AS LOGIN = 'LOGIN_internal_principal_spconfigure';
-select user_name(), suser_name()
-EXEC tools.up_sp_configure_show_advanced_options
+SELECT USER_NAME(), SUSER_NAME() , session_user , system_user
+EXEC tools_sp_configure.up_sp_configure_show_advanced_options
 REVERT
-select user_name(), suser_name()
+SELECT USER_NAME(), SUSER_NAME() , session_user , system_user
 
 
-DROP PROC IF EXISTS tools.up_sp_configure
+DROP PROC IF EXISTS tools_sp_configure.up_sp_configure
 GO
-CREATE OR ALTER PROC tools.up_sp_configure
+CREATE OR ALTER PROC tools_sp_configure.up_sp_configure
 WITH EXECUTE AS OWNER -- 'user_internal_principal_spconfigure'
 AS
 -- whatever is being done within the body of this procedure, will be done by the internal_principal_ALTER_DB
@@ -67,18 +67,18 @@ GO
 -------------------------------------------------------------------------------
 -- GRANT EXECUTE ON tools.up_sp_configure	TO user_internal_principal_spconfigure
 -- https://learn.microsoft.com/en-us/sql/t-sql/statements/grant-transact-sql?view=sql-server-ver16#with-grant-option
-GRANT EXECUTE ON tools.up_sp_configure	TO role_internal_principal_spconfigure -- WITH GRANT OPTION;  
+GRANT EXECUTE ON tools_sp_configure.up_sp_configure	TO role_internal_principal_spconfigure -- WITH GRANT OPTION;  
 
 
 -- tests
-EXEC tools.up_sp_configure
+EXEC tools_sp_configure.up_sp_configure
 
-select user_name(), suser_name()
+SELECT USER_NAME(), SUSER_NAME() , session_user , system_user
 EXECUTE AS LOGIN = 'LOGIN_internal_principal_spconfigure';
-select user_name(), suser_name()
-EXEC tools.up_sp_configure
+SELECT USER_NAME(), SUSER_NAME() , session_user , system_user
+EXEC tools_sp_configure.up_sp_configure
 REVERT
-select user_name(), suser_name()
+SELECT USER_NAME(), SUSER_NAME() , session_user , system_user
 
 
 
@@ -86,9 +86,9 @@ select user_name(), suser_name()
 -- select * from sys.configurations where is_advanced=0
 -- select * from sys.configurations where is_advanced=1
 -- sp_help 'sys.configurations'
-DROP PROC IF EXISTS tools.up_sp_configure_option_value
+DROP PROC IF EXISTS tools_sp_configure.up_sp_configure_option_value
 GO
-CREATE OR ALTER PROC tools.up_sp_configure_option_value
+CREATE OR ALTER PROC tools_sp_configure.up_sp_configure_option_value
 @param_option Nvarchar(70),
 @param_value int = NULL
 --WITH EXECUTE AS 'sa' -- OWNER --- 'user_internal_principal_spconfigure'
@@ -258,7 +258,7 @@ GO
 --GRANT EXECUTE ON tools.up_sp_configure_option_value	TO user_internal_principal_spconfigure
 --GRANT EXECUTE ON tools.up_sp_configure				TO user_internal_principal_spconfigure
 -- https://learn.microsoft.com/en-us/sql/t-sql/statements/grant-transact-sql?view=sql-server-ver16#with-grant-option
-GRANT EXECUTE ON tools.up_sp_configure_option_value	TO role_internal_principal_spconfigure -- WITH GRANT OPTION;  
+GRANT EXECUTE ON tools_sp_configure.up_sp_configure_option_value	TO role_internal_principal_spconfigure -- WITH GRANT OPTION;  
 
 -- go to 8B to show how DBAs can use these SPs
 -- login as "login_internal_principal_spconfigure"
@@ -266,9 +266,9 @@ GRANT EXECUTE ON tools.up_sp_configure_option_value	TO role_internal_principal_s
 
 
 
-DROP PROC IF EXISTS tools.up_sp_configure_advanced_option_value -- up_sp_configure_option_value
+DROP PROC IF EXISTS tools_sp_configure.up_sp_configure_advanced_option_value -- up_sp_configure_option_value
 GO
-CREATE OR ALTER PROC tools.up_sp_configure_advanced_option_value
+CREATE OR ALTER PROC tools_sp_configure.up_sp_configure_advanced_option_value
 @param_option Nvarchar(70),
 @param_value int = NULL
 --WITH EXECUTE AS 'sa' -- OWNER --- 'user_internal_principal_spconfigure'
@@ -437,7 +437,7 @@ AS
 -------------------------------------------------------------------------------
 -- GRANT EXECUTE ON tools.up_sp_configure_advanced_option_value TO user_internal_principal_spconfigure
 -- https://learn.microsoft.com/en-us/sql/t-sql/statements/grant-transact-sql?view=sql-server-ver16#with-grant-option
-GRANT EXECUTE ON tools.up_sp_configure_advanced_option_value TO role_internal_principal_spconfigure -- WITH GRANT OPTION;  
+GRANT EXECUTE ON tools_sp_configure.up_sp_configure_advanced_option_value TO role_internal_principal_spconfigure -- WITH GRANT OPTION;  
 
 use SQLSecurityDemoDB
 GO
