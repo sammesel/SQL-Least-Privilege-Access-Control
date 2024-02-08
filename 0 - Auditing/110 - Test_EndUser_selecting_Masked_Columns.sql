@@ -21,9 +21,6 @@ SELECT TOP (50) BusinessEntityID,AccountNumber FROM Purchasing.Vendor
 SELECT * FROM Purchasing.Vendor WHERE BusinessEntityID=1596
 
 -- to be used with new logins, to validate if they have access to these tables:
-SELECT * FROM dbo.Contacts
-SELECT * FROM dbo.Contacts2
-SELECT * FROM dbo.emailtest
 SELECT * FROM dbo.ErrorLog
 SELECT * FROM HumanResources.Employee
 SELECT * FROM Person.Address
