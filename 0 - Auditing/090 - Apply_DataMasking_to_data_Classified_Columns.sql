@@ -9,10 +9,6 @@ SELECT USER_NAME(), SUSER_NAME() , session_user , system_user
 
 -- apply masking function to columns as needed
 -- examples below used DEFAULT masking function only
-
-USE [SQLSecurityDemoDB]
-GO
-
 --
 
 
