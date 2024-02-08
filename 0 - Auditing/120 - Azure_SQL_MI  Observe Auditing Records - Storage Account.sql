@@ -39,3 +39,5 @@ GO
 
 
 -- https://solutioncenter.apexsql.com/analyze-and-read-sql-server-audit-information/#Reading%20The%20Audit%20Information%20from%20The%20*.Sqlaudit%20Files
+
+
