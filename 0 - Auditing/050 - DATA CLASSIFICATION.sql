@@ -130,17 +130,17 @@ GO
 DROP SENSITIVITY CLASSIFICATION FROM [dbo].[ErrorLog].[UserName]
 GO
 
-DROP SENSITIVITY CLASSIFICATION FROM [dbo].[Contacts2].[ContactEmail]
-GO
+-- DROP SENSITIVITY CLASSIFICATION FROM [dbo].[Contacts2].[ContactEmail]
+-- GO
 
-DROP SENSITIVITY CLASSIFICATION FROM [dbo].[Contacts].[ContactEmail]
-GO
+-- DROP SENSITIVITY CLASSIFICATION FROM [dbo].[Contacts].[ContactEmail]
+--GO
 
-ADD SENSITIVITY CLASSIFICATION TO [dbo].[Contacts].[ContactEmail] WITH (label = 'Confidential', label_id = '331f0b13-76b5-2f1b-a77b-def5a73c73c2', information_type = 'Contact Info', information_type_id = '5c503e21-22c6-81fa-620b-f369b8ec38d1');
-GO
+--ADD SENSITIVITY CLASSIFICATION TO [dbo].[Contacts].[ContactEmail] WITH (label = 'Confidential', label_id = '331f0b13-76b5-2f1b-a77b-def5a73c73c2', information_type = 'Contact Info', information_type_id = '5c503e21-22c6-81fa-620b-f369b8ec38d1');
+--GO
 
-ADD SENSITIVITY CLASSIFICATION TO [dbo].[Contacts2].[ContactEmail] WITH (label = 'Confidential', label_id = '331f0b13-76b5-2f1b-a77b-def5a73c73c2', information_type = 'Contact Info', information_type_id = '5c503e21-22c6-81fa-620b-f369b8ec38d1');
-GO
+--ADD SENSITIVITY CLASSIFICATION TO [dbo].[Contacts2].[ContactEmail] WITH (label = 'Confidential', label_id = '331f0b13-76b5-2f1b-a77b-def5a73c73c2', information_type = 'Contact Info', information_type_id = '5c503e21-22c6-81fa-620b-f369b8ec38d1');
+--GO
 
 ADD SENSITIVITY CLASSIFICATION TO [dbo].[ErrorLog].[UserName] WITH (label = 'Confidential', label_id = '331f0b13-76b5-2f1b-a77b-def5a73c73c2', information_type = 'Credentials', information_type_id = 'c64aba7b-3a3e-95b6-535d-3bc535da5a59');
 GO
