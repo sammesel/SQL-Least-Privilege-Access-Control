@@ -34,10 +34,10 @@ Use the following scripts in the order they appear in the table below:
 | 200_A2_B_SQLServer_on_VM_login_with_DBA_for_RESTORE_and_restore_databases.sql | **for tests on SQL Server on-premises or VM**<br>Login as Restore operator.<br> Perform Restore on database: <ul><li>AdventureWorks</li></ul> |  Y | N | ? |
 | 200_A2_C_CleanUp_RestoredDatabase.sql | Clean-up entries on MSDB<br>Drops restored database  |  Y | Y | ? |
 | 200_A2_D_CleanUp_Login_User.sql | Clean-up Login and User for Restore operator |  Y | Y | ? |
-| 200_B1_A_Create_DBA_with_db_ddlAdmin.sql | Creates a Login and User for DDL-Admin |  Y | Y | ? |
+| **200_B1_A_Create_DBA_with_db_ddlAdmin.sql** | Creates a Login and User for DDL-Admin |  Y | Y | ? |
 | 200_B1_B_test_DBA_with_db_ddlAdmin_index_Maintenance.sql | Login as DDL-Admin.<br>Executes statements to: <ul><li>Create a Table</li><li>Altetr Table</li><li>Access Data from created table</li><li>Add (document) Extended Properties to the table</li><li>try to select data from the created table</li><li>try to drop created table</li><li>try to overpower masking settings</li><li>Try to select data from other schemas/tables</li><li>Creates Indexes</li><li>Alter Indexes</li><li>Drop Indexes</li><li>Alter Indexes</li><li>Create Views</li></ul> |  Y | Y | ? |
 | 200_B1_C_test_DBA_with_db_ddlAdmin_statistics_Maintenance.sql | Login as DDL-Admin.<br>Executes statements to: <ul><li>Create Statistics</li><li>Update Statistics</li><li>Drop Statistics</li></ul>| Y | Y | ? |
-| 200_B1_D_DROP_DBA_with_db_ddlAdmin.sql | Clean-up Login and User for DDL Admin |  Y | Y | ? |
+| **200_B1_D_DROP_DBA_with_db_ddlAdmin.sql** | Clean-up Login and User for DDL Admin |  Y | Y | ? |
 | 200_D1_A_create_DBA_for_DBCC.sql | Create a login who will perform DBCC operations |  Y | Y | ? |
 | 200_D1_B_create_elevated_logins_roles.sql | Creates: <ul><li>a schema to contain tools to execute DBCC</li><li>an Internal Principal for DBCC commands</li></ul>  |  Y | Y | ? |
 | 200_D1_C_create_elevated_SPs.sql | Creates Stored Procedures in the tools schema to execute DBCC commands:<ul><li>up_sp_DBCC_statement - Stored Procedure to execute a generic DBCC command, with limited validation</li><li>up_sp_DBCC_Statement_all_DBCCs - Stored Procedure to execute commands limited to a **restricted**  list of DBCC commands</li></ul> |  Y | Y | ? |
