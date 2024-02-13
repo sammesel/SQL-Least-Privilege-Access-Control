@@ -55,7 +55,16 @@ For scripts using **sa** principal:<br>
 <li>for an Azure SQL Managed Instance, instead of **sa** you need to login with the **Managed Instance Admin** that can be obtained at the Overview page of your Azure SQL MI</li>
 </ul>
 ![Azure-SQL-MI-LOGIN](images/Azure-SQL-MI-Credential-for-LOGIN.png)
+<br>
 
+### 3 - Logins from AAD<br>
+
+All the scripts use Logins created using SQL Authentication. 
+if your SQL Authentication is via Windows Active Directory, please refer to following links:<ul>
+<li></li>
+<li>https://learn.microsoft.com/en-us/sql/t-sql/statements/create-user-transact-sql?view=sql-server-ver16</li>
+<li>https://learn.microsoft.com/en-us/azure/azure-sql/database/authentication-aad-overview?view=azuresql#azure-ad-features-and-limitations</li>
+</ul>
 
 ## disclaimer
 
