@@ -2,6 +2,10 @@
 -- LOGIN as:		sa
 -- use password:	'<password-place-holder>'
 -- ================================================================================= --
+
+-- NOTE: don't execute this script until you have completed reviewing module 5: Object Management
+--		 as it uses the same LOGIN created here: DBA_With_DB_DDLAdmin
+
 SELECT USER_NAME(), SUSER_NAME() , session_user , system_user
 GO
 
