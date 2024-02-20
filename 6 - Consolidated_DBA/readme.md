@@ -1,4 +1,4 @@
-# COnsolidated DBA
+# Consolidated DBA
 
 ## This folder contains scripts to demonstrate how to consolidate all granular permissions to a single DBA, and yet prevent this principal of seeing unmasked data.
 
