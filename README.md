@@ -16,16 +16,16 @@ The implementation is structured having the following principles:
     - Configure AlwaysON Availability Group
     - Setup Replication
     - Setting Resource Governor
-  - Access Control. Activities that can be performed by a DBA that require permissions that can be granted using
+  - Authorization using built-in permissions. Activities that can be performed by a DBA that require permissions that can be granted using
     - Server Roles
     - Database Roles
     - Custom Roles
-  - Wrapper Code. Activities that can be performed by executing Stored Procedure code developed for single purpose, like:
+  - Procedure-based authorization. Activities that can be performed by executing Stored Procedure code developed for single purpose, like:
     - running DBCC commands
     - setting or changing QUERY STORE properties
   
 
-  This solution prioritized finding Access Control options, as these are easy to implement and backward compatible with future SQL Server versions
+  This solution prioritized finding options using built-in permissions, as these are easy to implement and backward compatible with future SQL Server versions
 
   It is recommended to work first with the contents on the AUDITING folder, and then use the contents on the other folders as needed
 
