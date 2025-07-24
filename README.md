@@ -7,7 +7,7 @@ The implementation is structured with the following principles:
 - 1st: Identification of columns with PII or PHI data that need to be masked
 
   - masking these columns
-  - Setting these columns to be audited with DATA CLASSIFICATION access
+  - Tagging these columns to be audited with DATA CLASSIFICATION
   - Set SQL Server Auditing on the instance
   - Set SQL Server Database auditing for the database containing that data
 
