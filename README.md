@@ -2,7 +2,7 @@
 
 This is a solution to implement SQL Server security, by removing DBA rights to SELECT data from tables.<br>
 
-The implementation is structured with the following principles:
+The implementation is structured using the following principles:
 
 - 1st: Identification of columns with PII or PHI data that need to be masked
 
