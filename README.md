@@ -25,7 +25,7 @@ The implementation is structured using the following principles:
     - setting or changing QUERY STORE properties
   
 
-  This solution prioritized finding options using built-in permissions, as these are easy to implement and backward compatible with future SQL Server versions
+  This solution **prioritized** finding options using **built-in permissions**, as these are easy to implement and backward compatible with future SQL Server versions
 
   It is recommended to work first with the contents on the AUDITING folder, and then use the contents on the other folders as needed
 
